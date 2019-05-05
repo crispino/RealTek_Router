@@ -1,0 +1,8 @@
+c-ctype.o: c-ctype.c ../src/config.h c-ctype.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/include/stdbool.h
+
+../src/config.h:
+
+c-ctype.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/include/stdbool.h:

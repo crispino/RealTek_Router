@@ -1,0 +1,38 @@
+sysconf.o: sysconf.c ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ ../apmib/mibtbl.h ../apmib/apmib.h sysconf.h sys_utility.h
+set_init.o: set_init.c ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ ../apmib/mibtbl.h ../apmib/apmib.h ../apmib/upmib.h ../apmib/mibtbl.h \
+ sysconf.h sys_utility.h syswan.h
+set_bridge.o: set_bridge.c ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h sysconf.h sys_utility.h
+set_linux_vlan.o: set_linux_vlan.c ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h
+set_wlanapp.o: set_wlanapp.c ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h sysconf.h sys_utility.h
+sys_utility.o: sys_utility.c sysconf.h sys_utility.h
+set_firewall.o: set_firewall.c ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h sysconf.h sys_utility.h
+set_wan.o: set_wan.c ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ ../apmib/mibtbl.h ../apmib/apmib.h sysconf.h sys_utility.h syswan.h
+set_ipv6.o: set_ipv6.c ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ ../apmib/mibtbl.h ../apmib/apmib.h sysconf.h sys_utility.h
+ppp_inet.o: ppp_inet.c sysconf.h sys_utility.h ../apmib/apmib.h \
+ ../apmib/list.h ../apmib/mibdef.h
+ntp_inet.o: ntp_inet.c sysconf.h sys_utility.h ../apmib/apmib.h \
+ ../apmib/list.h ../apmib/mibdef.h ../apmib/mibtbl.h ../apmib/apmib.h
+ddns_inet.o: ddns_inet.c sysconf.h sys_utility.h
+timelycheck.o: timelycheck.c ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h ../apmib/mibtbl.h ../apmib/apmib.h \
+ ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_ethernet_adapter.h \
+ ../../adapter-api/rtk_api/rtk_common_utility.h
+Auto_DHCP_Check.o: Auto_DHCP_Check.c rtk_eventd.h ../apmib/apmib.h \
+ ../apmib/list.h ../apmib/mibdef.h ../apmib/mibtbl.h ../apmib/apmib.h \
+ sysconf.h sys_utility.h
+discovery.o: discovery.c pppoe.h config.h
+if.o: if.c pppoe.h config.h

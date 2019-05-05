@@ -1,0 +1,139 @@
+hard-locale.o: hard-locale.c ../src/config.h hard-locale.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/include/stdbool.h \
+ locale.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/locale.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/features.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/uClibc_config.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/cdefs.h \
+ stddef.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/include/stddef.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/uClibc_locale.h \
+ stdlib.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/stdlib.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/waitflags.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/waitstatus.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/endian.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/endian.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/byteswap.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/byteswap.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/byteswap-common.h \
+ sys/types.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/types.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/types.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/wordsize.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/typesizes.h \
+ time.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/time.h \
+ sys/select.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/select.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/select.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigset.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/time.h \
+ signal.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/signal.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/signum.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/siginfo.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigaction.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigcontext.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sgidefs.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigstack.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/ucontext.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/pthreadtypes.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigthread.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/sysmacros.h \
+ alloca.h string.h \
+ /data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/string.h
+
+../src/config.h:
+
+hard-locale.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/include/stdbool.h:
+
+locale.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/locale.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/features.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/uClibc_config.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/cdefs.h:
+
+stddef.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/include/stddef.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/uClibc_locale.h:
+
+stdlib.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/stdlib.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/waitflags.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/waitstatus.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/endian.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/endian.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/byteswap.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/byteswap.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/byteswap-common.h:
+
+sys/types.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/types.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/types.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/wordsize.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/typesizes.h:
+
+time.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/time.h:
+
+sys/select.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/select.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/select.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigset.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/time.h:
+
+signal.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/signal.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/signum.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/siginfo.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigaction.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigcontext.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sgidefs.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigstack.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/ucontext.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/pthreadtypes.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/bits/sigthread.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/sys/sysmacros.h:
+
+alloca.h:
+
+string.h:
+
+/data/xiaoning/RealTek/HN120/toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827/bin/../lib/gcc/mips-linux-uclibc/4.4.7/../../../../mips-linux-uclibc/include/string.h:

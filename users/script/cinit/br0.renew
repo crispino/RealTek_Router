@@ -1,0 +1,25 @@
+#!/bin/sh
+# udhcpc renew script
+# do not edit next line, it will be replaced to "CONFIG_STATIC_IP=y" or "CONFIG_STATIC_IP=" by mkimg
+###CONFIG_STATIC_IP###
+
+if [ "$CONFIG_STATIC_IP" = 'y' ]; then
+	TOOL=flash
+	GETMIB="$TOOL get"
+	eval `$GETMIB OP_MODE`
+	eval `$GETMIB IP_ADDR`
+	if [ "$OP_MODE" == '0' ]; then
+		ifconfig br0:1 ${IP_ADDR%.*}.1 netmask 255.255.255.0 broadcast ${IP_ADDR%.*}.255 down
+	fi
+fi
+sysconf renew dhcp $interface $ip $subnet $router $dns
+echo $ip > /tmp/ip.txt
+if [ "$CONFIG_STATIC_IP" = 'y' ]; then
+	if [ "$OP_MODE" != '0' ]; then
+		sleep 3
+		ifconfig br0:1 ${IP_ADDR%.*}.1 netmask 255.255.255.0 broadcast ${IP_ADDR%.*}.255 down
+		sleep 3
+		ifconfig br0:1 ${IP_ADDR%.*}.1 netmask 255.255.255.0 broadcast ${IP_ADDR%.*}.255 up
+	fi
+fi
+

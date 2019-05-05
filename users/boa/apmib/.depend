@@ -1,0 +1,2 @@
+apmib.o: apmib.c apmib.h list.h mibdef.h mibtbl.h def_setting_config.h
+mibtbl.o: mibtbl.c apmib.h list.h mibdef.h mibtbl.h

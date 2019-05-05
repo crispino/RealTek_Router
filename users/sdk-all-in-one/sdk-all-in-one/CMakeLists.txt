@@ -1,0 +1,169 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(ont_all )
+
+
+SET(CMAKE_SYSTEM_NAME Linux)
+# search for programs in the build host directories
+SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+# for libraries and headers in the target directories
+SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}  -I$ENV{DIR_ROOT}/users/${CRYPTO_INC} -I$ENV{DIR_ROOT}/users/adapter-api/cmcc -I$ENV{DIR_ROOT}/users/adapter-api/rtk_api -I$ENV{DIR_ROOT}/users/boa/apmib")
+if(DECREASE_OPTION)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DONT_DECREASE_SIZE")
+endif(DECREASE_OPTION)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "-L$ENV{DIR_ROOT}/users/${CRYPTO_DIR} -L$ENV{DIR_ROOT}/users/sdk-all-in-one/sdk-all-in-one/realtek/edp -L$ENV{DIR_ROOT}/users/adapter-api/rtk_api -lrtk_adapter -L$ENV{DIR_ROOT}/users/adapter-api/cmcc -lcmcc_adapter -L$ENV{DIR_ROOT}/users/boa/apmib -lapmib -lm")
+
+set(CMAKE_DEBUG_POSTFIX "d")
+
+set(ONT_SOCK_SEND_BUF_SIZE 4096)
+set(ONT_SOCK_RECV_BUF_SIZE 2048)
+set(ONT_SERVER_ADDRESS "api.heclouds.com")
+set(ONT_SERVER_PORT 80)
+set(_STATIC 1)
+
+if(WIN32)
+set(_STATIC 1)
+elseif(UNIX OR CYGWIN)
+option(_STATIC "static library" 1)
+endif(WIN32)
+
+option(_BASE "sdk base" 1)
+option(_EDP "edp protocol" 1)
+option(_JTEXT "jtext protocol" 0)
+option(_MODBUS "modbus protocol" 0)
+option(_MQTT "mqtt protocol" 0)
+option(_VIDEO "rtmp video protocol" 0)
+option(_MP4V2 "mp4 open source" 0)
+option(_ONVIF "onvif protocol" 0)
+option(_TEST "test" 0)
+option(_SAMPLE "sample" 0)
+option(_MONVIF "multi thread onvif gateway" 0)
+option(_REALTEK "realtek" 1)
+
+if(WIN32)
+    add_definitions(-DONT_OS_WIN)
+    add_definitions(-DWIN32_LEAN_AND_MEAN)
+
+    if(MSVC)
+        add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+        add_definitions(-D_CRT_NONSTDC_NO_DEPRECATE)
+    
+        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /wd4819")
+        set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} /MTd /DONT_DEBUG")
+        set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /MT")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4819")
+        set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd /DONT_DEBUG")
+        set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+    endif(MSVC)
+
+    set(ONT_PLATFORM_PERSISTENCE_SUPPORT 1)
+    set(ONT_PLATFORM_FLOATING_POINT_SUPPORT 1)
+elseif(UNIX OR CYGWIN)
+    add_definitions(-DONT_OS_POSIX)
+
+    if(CMAKE_COMPILER_IS_GNUCC)
+        #use open source code not support c89
+        if(_MP4V2 OR _ONVIF) 
+            set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fPIC")
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fPIC -fpermissive")
+        else()
+            set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fPIC -pedantic -std=c89")
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fPIC -pedantic")        
+        endif(_MP4V2 OR _ONVIF) 
+
+        set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0 -ggdb3")
+        set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -Os")
+        
+        set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -O0 -ggdb3")
+        set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Os")
+        set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-rpath,.")
+        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath,.")
+    endif(CMAKE_COMPILER_IS_GNUCC)
+    
+    set(ONT_PLATFORM_PERSISTENCE_SUPPORT 1)
+    set(ONT_PLATFORM_FLOATING_POINT_SUPPORT 1)
+    string(TOLOWER "${CMAKE_BUILD_TYPE}" __DEBUG)
+    string(COMPARE EQUAL "${__DEBUG}" "debug" ___DEBUG)
+    if(___DEBUG)
+        add_definitions(-DONT_DEBUG)
+    endif(___DEBUG)
+endif(WIN32)
+
+set(ONT_SDK_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${ONT_SDK_ROOT}/include)
+
+if(_VIDEO)
+    set(ONT_PROTOCOL_VIDEO 1)
+    add_definitions(-DNO_CRYPTO)
+    if(_MP4V2)
+        add_definitions(-DONT_VIDEO_RVOD_MP4SUPPORTED)
+        if(_STATIC)
+            add_definitions(-DMP4V2_USE_STATIC_LIB)
+        endif(_STATIC)
+    endif(_MP4V2)
+endif(_VIDEO)
+
+if(_EDP)
+    set(ONT_PROTOCOL_EDP 1)
+elseif(_JTEXT)
+    set(ONT_PROTOCOL_JTEXT 1)
+elseif(_MODBUS)
+    set(ONT_PROTOCOL_MODBUS 1)
+elseif(_MQTT)
+    set(ONT_PROTOCOL_MQTT 1)
+endif(_EDP)
+configure_file(${ONT_SDK_ROOT}/include/ont/config.h.in ${ONT_SDK_ROOT}/include/ont/config.h)
+
+if(_STATIC)
+    set(PLATFORM "${CMAKE_SYSTEM_NAME}_s")
+    set(BASE     "base_s")
+    set(EDP      "edp_s")
+    set(JTEXT    "jtext_s")
+    set(MODBUS   "modbus_s")
+    set(MQTT     "mqtt_s")
+    set(VIDEO     "video_s")
+    set(MP4V2     "mp4v2_s")
+    set(ONVIF     "onvif_s")
+    set(LIVERTSP  "livertsp_s")
+else(_STATIC)
+    set(PLATFORM "${CMAKE_SYSTEM_NAME}_s")
+    set(BASE     "base")
+    set(EDP      "edp")
+    set(JTEXT    "jtext")
+    set(MODBUS   "modbus")
+    set(MQTT     "mqtt")
+    set(VIDEO     "video")
+    set(MP4V2     "mp4v2")
+    set(ONVIF     "onvif")
+    set(LIVERTSP  "livertsp")   
+endif(_STATIC)
+
+# platforms
+add_subdirectory(platforms)
+
+# protocols
+add_subdirectory(protocols)
+
+# tests
+if(_TEST)
+add_subdirectory(test)
+endif(_TEST)
+
+# samples
+if(_SAMPLE)
+add_subdirectory(sample)
+endif(_SAMPLE)
+
+if(_MONVIF)
+add_subdirectory(monvif)
+endif(_MONVIF)
+
+if(_REALTEK)
+add_subdirectory(realtek)
+endif(_REALTEK)
+

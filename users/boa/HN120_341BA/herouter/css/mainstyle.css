@@ -1,0 +1,227 @@
+/*common*/
+body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border: 0;}
+body,ul,ol,li,p,form,fieldset,table,td{ font-family:Arial,"microsoft yahei", sans-serif;}
+td,p,li,select,input,textarea,div{font-size:12px;}
+/*{-moz-transition: all 0.3s ease-in;-webkit-transition: all 0.3s ease-in;-o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;}
+*:hover{-moz-transition: all 0.3s ease-in;-webkit-transition: all 0.3s ease-in;-o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;}*/
+ul,li{list-style-type:none;}
+select,input{vertical-align:middle;margin:0;padding:0;}
+i,em{font-style: normal;}
+a{text-decoration:none;}
+a:link{color:#136fbc;}
+a:visited{color:#136fbc;}
+a:hover,a:active,a:focus{color:#136fbc; text-decoration:none;}
+select {border: solid 1px #000;appearance:none;-moz-appearance:none;-webkit-appearance:none;}
+.selectinp{height:28px; border:1px #d2d2d2 solid; width:252px; line-height:26px; font-family:"微软雅黑";color:#666;padding:0 10px; background:#fff url(../images/dropd.png) no-repeat right center;}
+.selectinp_custom{height:28px; border:1px #d2d2d2 solid; width:100px; line-height:26px; font-family:"微软雅黑";color:#666;padding:0 10px; background:#fff url(../images/dropd.png) no-repeat right center;}
+.selectinp_custom1{height:28px; border:1px #d2d2d2 solid; width:85px; line-height:26px; font-family:"微软雅黑";color:#666;padding:0 10px; background:#fff url(../images/dropd.png) no-repeat right center;}
+.selectinp_custom2{height:28px; border:1px #d2d2d2 solid; width:71px; line-height:26px; font-family:"微软雅黑";color:#666;padding:0 10px; background:#fff url(../images/dropd.png) no-repeat right center;}
+.selectinp_custom3{height:28px; border:1px #d2d2d2 solid; width:200px; line-height:26px; font-family:"微软雅黑";color:#666;padding:0 10px; background:#fff url(../images/dropd.png) no-repeat right center;}
+.selectinp,.selectinp_custom,.selectinp_custom1,.selectinp_custom2,.selectinp_custom3{background: none\0;padding: 0\0;background-color: #fff\0;}
+.radiobox{ margin-top:-2px;}
+.inp1 {height:26px; border:1px #d2d2d2 solid; width:230px;font-family:"微软雅黑"; color:#666; padding:0 10px;}
+.inp2 {height:26px; border:1px #d2d2d2 solid; width:160px;font-family:"微软雅黑"; color:#666; padding:0 10px;}
+.inp3 {height:26px;border:1px #d2d2d2 solid; width:150px;font-family:"微软雅黑"; color:#666; padding:0 10px;}
+.checkinp{height:26px; width:26px; padding:0; border:none; background:#f5f5f5;}
+
+
+/*ext*/
+.clean{ display:block; clear:both; margin:0px; padding:0px; visibility:hidden;}
+
+/*public*/
+body{ color:#676767;}
+.int { height:410px; width:670px; overflow:hidden; background:#fcfcfa url(../images/fullbg.gif) repeat-x; padding:5px 15px;}
+.int_1 { height:520px;}
+.int_2 { width:100%;height: auto; min-height: 530px;overflow: auto;padding: 0;}
+.int h1{ font-size:18px; line-height:50px;height: 50px; border-bottom:1px #d3d3d3 solid;}
+.int h1.Txtht{font-size: 16px;color: #cccccc;} 
+.int h1 #step1{font-size: 16px;color: #cccccc;padding: 0;} 
+.int h1 #step3{font-size: 16px;color: #cccccc;padding: 0;} 
+.int h1 span{ font-size:12px; color:#919191; padding-left:15px; font-weight:normal;}
+.int h1 .Txttype {font-size:20px;line-height:50px; color: #000000;padding:0;font-weight: bold;}
+
+.cfg{ padding:15px 0; height:330px;}
+.cfgleft{ float:left; width:185px; height:330px; background:url(../images/cfgleftbg.png) repeat-y;}
+.cfgleft ul{}
+.cfgleft li{ cursor:pointer; height:40px; line-height:40px; font-size:14px; color:#666; border-left:4px #dfdfdf solid ; padding-left:12px;}
+.cfgleft li a,.cfgleft li a:visited{color:#666; display:block; height:40px;width:170px; }
+.cfgleft li a:hover,.cfgleft li a:active{ text-decoration:none;}
+.cfgleft li:hover{ border-left:4px #1e9ec5 solid;  font-weight:bold;}
+.cfgleft li.on{ border-left:4px #1e9ec5 solid; color:#1e9ec5; font-weight:bold; font-size:14px; background:#ECEDEB url(../images/arrow1.png) no-repeat 170px center;}
+.cfgleft li.on a{color:#1e9ec5;}
+.int .cfgleft li a.disabled{color: #aab1a9;}
+
+.cfgright{ float:left; width:470px; height:330px;}
+.cfg td{ height:36px; font-size:14px;}
+.cfg td span{ padding-left:50px; font-size:14px;}
+.cfg .spheight{ height:60px; }
+.cfg td label{ font-size:14px; line-height:60px;}
+.cfg td em {font-style: normal;color: #ff7428;background: url(../images/check.png) no-repeat left bottom;}
+.cfg td i{ color:#999; }
+.cfgright td span{ padding-left:30px;}
+
+.int_2 h1{margin: 0 15px;}
+.int_2 .cfg{overflow: hidden;height: auto;}
+.int_2 .cfgleft{height: auto;min-height: 330px; padding-bottom: 2000px;margin-bottom: -2000px;}
+.int_2 .cfgright{width:460px;height: auto;padding: 10px 0 30px 20px;}
+
+.subpart{ height:48px; position: relative;}
+.subpart ul{ position: absolute;top: 30px;left: 50%;margin-left: -150px;}
+.subpart li{ float:left; padding-right:10px;}
+.subpart b{ display:block; height:48px; cursor:pointer; width:170px; font-weight:normal; float:left; background:#77d1df; font-size:18px; color:#fff; text-align:center; line-height:48px;}
+.subpart b:hover{ background:#56bbcb;}
+.subpart .cancel{ width:110px; background:#99e4f0; }
+.subpart #next{ margin-left: 65px;}
+.subpart #cancel{ margin-left: 95px; }
+
+.selectswitch{ height:29px;}
+.selectswitch em{ float:left; height:20px; width:20px; display:block; margin:4px; padding:0;}
+.selectswitch .closestate{ background:url(../images/wifistateicon.png) no-repeat;}
+.selectswitch .openstate{ background:url(../images/wifistateicon.png) no-repeat 0 -40px;}
+.cfg td .selectswitch span{ float:left; padding-left:0px; background:url(../images/selbg.png) no-repeat; width:55px; height:29px; display:block;}
+.selectswitch strong{ display:block; margin:3px; height:23px; width:49px; background:url(../images/select.png) no-repeat right center; cursor:pointer;}
+.switchoff{}
+.switchoff .closestate{ background-position:0 -20px;}
+.switchoff .openstate{ background-position:0 -60px;}
+.switchoff  strong{ background-position:left center;}
+.selectswitch strong,.closestate,.openstate{ -moz-transition: all 0.3s ease-in;-webkit-transition: all 0.3s ease-in;-o-transition: all 0.3s ease-in;transition: all 0.3s ease-in;}
+
+
+
+/*设置向导*/
+.box{ width:500px; height:40px; margin:0 auto; }      
+.r1{ height:1px; overflow:hidden; margin:0 5px; background:#56bbcb; }     
+.r2{ height:1px; overflow:hidden; margin:0 3px; border-left:2px solid #56bbcb; border-right:2px solid #56bbcb; }      
+.r3{ height:1px; overflow:hidden; margin:0 2px; border-left:1px solid #56bbcb; border-right:1px solid #56bbcb; }      
+.r4{ height:2px; margin:0 1px; overflow:hidden; border-left:1px solid #56bbcb; border-right:1px solid #56bbcb; }       
+.content{ height:30px; border-left:1px solid #56bbcb; border-right:1px solid #56bbcb; padding:7px 10px; } 
+.content h2{ color:#56bbcb; font-family:"微软雅黑"; font-size:16px;}
+
+.entstate{padding-top:50px;padding-left: 200px;}
+.entstate li{line-height:30px; font-size:14px; height:30px;text-align: left;}
+.entstate li b{width:100px; display:block; float:left;}
+.entstate li span{display:block; float:left;}
+
+
+/*ip地址/MAC过滤*/
+.swindow{ height:165px; margin-top:5px; border-left:1px #FFFFFF dashed; border-right:1px #FFFFFF dashed; border-top:1px #FFFFFF dashed; ;}
+.sleft{ float:left; margin:8px; width:100px; height:149px; overflow:hidden;background:url(../images/macarrowbg.png) repeat-x 0 center;}
+.fixblock{ position:absolute; height:149px; overflow:hidden; width:100px; }
+.sleft .up{ height:40px; cursor:pointer; background: url(../images/macarrow.png) no-repeat center 0; position:absolute; width:100px; z-index:999;}
+.sleft .down{ height:40px; cursor:pointer; width:100px;  background: url(../images/macarrow.png) no-repeat center -120px;  position:absolute; bottom:0; z-index:998;}
+.sleft .op{ height:298px; top:0; width:100px; position:absolute; z-index:99; text-align:center;}
+.sleft .op p{ height:93px; display:block; vertical-align:middle; padding-top:56px; font-size:14px;}
+.sleft .opst2{ top:-149px;}
+.macinfo{ height:28px; background:#f2f2f2; padding:0 5px; line-height:28px; color:#8b8b8b;}
+.sleft .upon{ background-position: center 0;}
+.sleft .upoff{ background-position: center -40px;}
+.sleft .downon{ background-position: center -80px;}
+.sleft .downoff{ background-position:center -120px;}
+.sright{ height:149px; margin:8px 0; width:350px; float:right; border-left:1px #beeaf7 solid;}
+.statedisp{ height:28px; padding:0 8px 5px 8px;line-height:28px;}
+.statedisp strong{ color:#2d9319; font-size:12px;  font-weight:normal; float:left;}
+.statedisp b{ color:#f00; font-size:12px;  font-weight:normal; float:left;}
+.statedisp span{ float:right; display:block; height:28px; width:100px; font-size:14px; text-align:center; color:#fff; background:#77d1df; cursor:pointer; }
+.statedisp span:hover{ background:#56bbcb;}
+.maclist{ height:115px; overflow-x:hidden; overflow-y:auto; padding:0 0 0 5px;}
+.maclist ul{}
+.maclist li{ float:left; width:152px; height:28px; border:1px #d1d1d1 dashed; margin:5px;}
+.maclist li input{ border:none; height:27px; width:135px; line-height:28px; padding:0 5px; font-family:Arial,"microsoft yahei", sans-serif;}
+.maclist li em{ font-style:normal; padding:0 5px; line-height:28px; float:left; width:112px; display:block;}
+.maclist li span{ display:block; width:28px; float:right; height:20px; margin:4px 0; border-left:1px #e1e1e1 solid; background:url(../images/delmac.png) no-repeat center center; cursor:pointer;}
+.maclist1 li {
+    width: 207px;
+}
+.maclist1 li em {
+    width: 167px;
+}
+.maclist1 li input {
+    width: 190px;
+}
+.maclist2 li {
+    width: 307px;
+    position: relative;
+}
+.maclist2 li em {
+    width: 267px;
+}
+.maclist2 li input {
+    width: 290px;
+}
+.maclist2 li span{float:none; margin:0;position: absolute;top: 4px;right: 0;}
+
+
+/*系统状态*/
+.sysstate{ padding:5px 15px; color:#757575;overflow: hidden;}
+.sysstate li{line-height:28px; font-size:12px; height:28px;}
+.sysstate li b{width:64px; display:block; float:left;}
+.sysstate li span{display:block; float:left;}
+.sysstate h3{ font-size:16px; color:#3aaec1; line-height:28px;margin-top: 10px;}
+.state1{ float:left; width:326px;; padding:10px ;}
+.state2{ float:right; width:280px;  padding:10px ;}
+
+/*模拟下拉选择框*/
+.fix{ position:absolute;z-index:999;}
+.bm {margin-top:30px;position:absolute;}
+.ganyin{ position:absolute; height:30px;cursor:pointer; border:1px #333 solid; z-index:100001; background:#0099CC;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity: 0;opacity: 0;}
+.bm ul{ padding:1px 0 0 0; border-bottom:1px #eee solid; border-left:1px #eee solid; border-right:1px #eee solid; }
+.bm li{ color:#0781d9; line-height:30px; padding-left:10px; height:30px; background:#fff; font-size:12px; text-align:left; padding-right:12px; display:block;}
+.bm .nowon{ color:#adadae;}
+.bm li:hover{ background-color:#b2e9fd;cursor:pointer;}
+
+
+/*IPv6*/
+.dnsinpt input[type=text]{width: 38px;}
+input[type=radio]{margin-top: -2px;}
+.on {display:on}
+.off {display:none}
+
+
+/*系统升级*/
+.update{ padding:30px 10px 0 0; border-bottom:1px #d3d3d3 solid;}
+.style2{ padding-top:10px; height:90px;}
+.style2 p{float:left; color:#FF0000; display:block; width:170px; line-height:20px; padding:4px 0 4px 35px; background:url(../images/check3_07.png) no-repeat 2px center;}
+.style2 .subbtn2{ float:right; height:48px; width:240px;}
+.style2 .subbtn2 span{ float:right; cursor:pointer; display:block; height:48px; width:110px; margin-left:10px;line-height:48px; font-size:16px;background:#77d1df; color:#fff; text-align:center;}
+.style2 .subbtn2 span:hover{ background:#56bbcb;}
+.style2 .subbtn2 em{ display:block; width:240px; line-height:28px; font-style:normal; color:#ff6c00; text-align:right; }
+.style2 .subbtn2 .upload{  background:#ff6c00;}
+.style2 .subbtn2 .upload:hover{ background:#ff8227;}
+.uploadbtn{ position:absolute; display:block; height:48px; width:110px; border:1px #333 solid;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity: 0;opacity: 0; cursor:pointer;}
+.uploadbtn input{height:48px; width:110px; cursor:pointer;}
+
+
+
+/*配置导入导出*/
+.cfgright td .showbtn:hover{
+   background:#56bbcb;
+}
+.cfgright td .showbtn{
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    width: 150px;
+    margin-left: 10px;
+    line-height: 48px;
+    font-size: 16px;
+    background: #77d1df;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 0;
+}
+.showbtn .hidebtn{
+	position: absolute;
+    display: block;
+    height: 48px;
+    width: 150px;
+    border: 1px #333 solid;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libcoap
+Description: C-Implementation of CoAP.
+Version: 4.1.2
+URL: https://libcoap.net/
+Libs: -L${libdir} -lcoap-1
+Cflags: -I${includedir}/coap

@@ -1,0 +1,168 @@
+alias.o: alias.c boa.h config.h compat.h defines.h globals.h escape.h \
+ apform.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h
+boa.o: boa.c boa.h config.h compat.h defines.h globals.h escape.h
+buffer.o: buffer.c boa.h config.h compat.h defines.h globals.h escape.h
+cgi.o: cgi.c boa.h config.h compat.h defines.h globals.h escape.h
+cgi_header.o: cgi_header.c boa.h config.h compat.h defines.h globals.h \
+ escape.h
+config.o: config.c boa.h config.h compat.h defines.h globals.h escape.h \
+ access.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h
+escape.o: escape.c boa.h config.h compat.h defines.h globals.h escape.h
+get.o: get.c boa.h config.h compat.h defines.h globals.h escape.h \
+ access.h asp_page.h auth.h ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h apform.h
+hash.o: hash.c boa.h config.h compat.h defines.h globals.h escape.h
+ip.o: ip.c boa.h config.h compat.h defines.h globals.h escape.h
+log.o: log.c boa.h config.h compat.h defines.h globals.h escape.h
+mmap_cache.o: mmap_cache.c boa.h config.h compat.h defines.h globals.h \
+ escape.h
+pipe.o: pipe.c boa.h config.h compat.h defines.h globals.h escape.h
+queue.o: queue.c boa.h config.h compat.h defines.h globals.h escape.h
+range.o: range.c boa.h config.h compat.h defines.h globals.h escape.h
+read.o: read.c boa.h config.h compat.h defines.h globals.h escape.h
+request.o: request.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h auth.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ apform.h
+response.o: response.c boa.h config.h compat.h defines.h globals.h \
+ escape.h
+signals.o: signals.c boa.h config.h compat.h defines.h globals.h escape.h \
+ apform.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h
+util.o: util.c boa.h config.h compat.h defines.h globals.h escape.h
+sublog.o: sublog.c compat.h config.h
+select.o: select.c boa.h config.h compat.h defines.h globals.h escape.h
+asp_page.o: asp_page.c boa.h config.h compat.h defines.h globals.h \
+ escape.h asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ apform.h auth.h
+fmtcpip.o: fmtcpip.c boa.h config.h compat.h defines.h globals.h escape.h \
+ ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h utility.h \
+ ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h ../apmib/mibtbl.h \
+ ../apmib/apmib.h asp_page.h
+fmfwall.o: fmfwall.c boa.h config.h compat.h defines.h globals.h escape.h \
+ apform.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h utility.h \
+ ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h asp_page.h
+fmlinuxvlan.o: fmlinuxvlan.c boa.h config.h compat.h defines.h globals.h \
+ escape.h apform.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h asp_page.h
+utility.o: utility.c ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h
+fmget.o: fmget.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h auth.h
+fmwlan.o: fmwlan.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h
+fmmgmt.o: fmmgmt.c boa.h config.h compat.h defines.h globals.h escape.h \
+ ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h utility.h \
+ ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h ../apmib/mibtbl.h \
+ ../apmib/apmib.h asp_page.h auth.h
+version.o: version.c
+fmddns.o: fmddns.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h
+fmroute.o: fmroute.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h
+fmipv6.o: fmipv6.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h ../system/sysconf.h
+fmbt.o: fmbt.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h
+fmpocketap.o: fmpocketap.c boa.h config.h compat.h defines.h globals.h \
+ escape.h asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ apform.h utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h
+fmdiskmanage.o: fmdiskmanage.c boa.h config.h compat.h defines.h \
+ globals.h escape.h apform.h ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h asp_page.h
+cJSON.o: cJSON.c cJSON.h
+perform_pppoe.o: perform_pppoe.c boa.h config.h compat.h defines.h \
+ globals.h escape.h access.h ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h cJSON.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h asp_page.h auth.h
+auth.o: auth.c auth.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ boa.h config.h compat.h defines.h globals.h escape.h
+discovery.o: discovery.c pppoe.h config.h
+if.o: if.c pppoe.h config.h
+fmHeUi.o: fmHeUi.c boa.h config.h compat.h defines.h globals.h escape.h \
+ asp_page.h ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h apform.h \
+ utility.h ../../adapter-api/rtk_api/rtk_api.h \
+ ../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../../adapter-api/rtk_api/../common/common_utility.h

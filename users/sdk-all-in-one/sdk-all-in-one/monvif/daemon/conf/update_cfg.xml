@@ -1,0 +1,11 @@
+<root>
+	<update>
+		<service_path>../bin/</service_path>
+		<service_name>monvif</service_name>
+		<service_updates_save_path>../updates/</service_updates_save_path>
+		<service_update_cmd_file>../bin/update.cmd</service_update_cmd_file>
+		<service_update_log_file>../bin/update.log</service_update_log_file>
+		<service_stop_cmd>cd ../demo && sh stop.sh</service_stop_cmd>
+		<service_start_cmd>cd ../demo && sh start.sh</service_start_cmd>
+	</update>
+</root>

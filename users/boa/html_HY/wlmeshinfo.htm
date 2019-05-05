@@ -1,0 +1,76 @@
+<html>
+<! Copyright (c) Realtek Semiconductor Corp., 2003~2005. All Rights Reserved. ->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<% getIndex("no-cache"); %>
+<title>System Command</title>
+<script type="text/javascript" src="util_gw.js"></script>
+<SCRIPT language=Javascript src="<% getInfo("lang");%>"></SCRIPT>
+<% getInfo("include_css"); %>
+<script>
+function showProxiedMAC()
+{
+	openWindow('/wlmeshproxy.htm', 'formMeshProxyTbl',620,340 );
+}
+</script>
+</head>
+<blockquote>
+<h2><script>dw(wlmeshinfo_header)</script></h2>
+
+<body>
+
+  <form action=/boafrm/formWlanRedirect method=POST name="formWlanRedirect">
+	<br>
+	<table border=0 width="540" cellspacing=4 cellpadding=0>
+		<tr><font size=2>
+		<script>dw(wlmeshinfo_explain)</script>
+        	</font></tr>
+		<tr><hr size=1 noshade align=top></tr>
+	    <tr>
+    	<font size=4><b><script>dw(wlmeshinfo_root)</script>&nbsp;&nbsp;&nbsp;&nbsp;</b>
+	    <input type="text" name="rootmac" size="15" maxlength="13" value=" <% wlMeshRootInfo();  %>" disabled="true">
+		</tr>
+	</table>
+	<table border="0" width=540>
+	<tr><font size=4><b><script>dw(wlmeshinfo_neighbor_table)</script></b></font></tr>
+	<% wlMeshNeighborTable(); %>
+	</table>
+	<br>
+	  <table border="0" width=540>
+	  <tr><font size=4><b><script>dw(wlmeshinfo_routing_table)</script></b></font></tr>
+	  <% wlMeshRoutingTable(); %>
+	  </table>
+	  <br>
+  	  <table border="1" width=540>
+	  <tr><font size=4><b><script>dw(wlmeshinfo_portal_table)</script></b></font></tr>
+	  <% wlMeshPortalTable(); %>
+	  </table>
+	  <br><br>
+
+	<table border="1" width=540>
+	<tr><font size=4><b><script>dw(wlmeshinfo_wireless_station_list)</script></b></font></tr>
+	<tr class="tbl_head"><td width="20%"><font size=2><b><script>dw(wlmeshinfo_mac)</script></b></td>
+	<td width="10%"><font size=2><b><script>dw(wlmeshinfo_mode)</script></b></td>
+	<td width="15%"><font size=2><b><script>dw(wlmeshinfo_tx)</script></b></td>
+	<td width="15%"><font size=2><b><script>dw(wlmeshinfo_rx)</script></b></td>
+	<td width="10%"><font size=2><b><script>dw(wlmeshinfo_tx_rate)</script></b></td>
+	<td width="10%"><font size=2><b><script>dw(wlmeshinfo_ps)</script></b></td>
+	<td width="15%"><font size=2><b><script>dw(wlmeshinfo_expired_time)</script></b></td></tr>
+	<% wirelessClientList(); %>
+	</table>
+	<br><br>
+
+	  <table border="1" width=240>
+	  <tr><font size=4><b><script>dw(wlmeshinfo_proxy_table)</script></b></font></tr>
+	  <% wlMeshProxyTable(); %>
+	  </table>
+	<br><br>
+	<input type="hidden" name="redirect-url" value="/wlmeshinfo.htm">
+	<input type="submit" name="refresh" value="Refresh">
+	<script>document.formWlanRedirect.refresh.value = wlmeshinfo_refresh;</script>
+	<br><br>
+  </form>  
+</body>
+</blockquote>
+</html>
+

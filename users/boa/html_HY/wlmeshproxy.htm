@@ -1,0 +1,37 @@
+<html>
+<! Copyright (c) Realtek Semiconductor Corp., 2003~2005. All Rights Reserved. ->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf8">
+<% getIndex("no-cache"); %>
+<script type="text/javascript" src="util_gw.js"></script>
+<SCRIPT language=Javascript src="<% getInfo("lang");%>"></SCRIPT>
+<title>System Command</title>
+<% getInfo("include_css"); %>
+</head>
+<blockquote>
+<h2><script>dw(wlmeshproxy_header)</script></h2>
+
+<body>
+<form action=/boafrm/formMeshProxyTbl method=POST name="formMeshProxyTbl">
+<table border=0 width="550" cellspacing=4 cellpadding=0>
+          <tr><font size=2>
+		<script>dw(wlmeshproxy_explain)</script>
+          </font></tr>
+          <tr><hr size=1 noshade align=top></tr>
+</table>
+<table border="0" width=240>
+<tr><font size=4><b><script>dw(wlmeshproxy_proxy_table)</script> </b></font></tr>
+<% wlMeshProxyTable(); %>
+</table>
+<br>
+<input type="hidden" value="/wlmeshproxy.htm" name="mesh-url">
+<input type="submit" value="Refresh" name="refresh">&nbsp;&nbsp;
+<script>document.formMeshProxyTbl.refresh.value = wlmeshproxy_refresh;</script>
+<input type="button" value=" Close " name="close" onClick="javascript: window.close();">
+<script>document.formMeshProxyTbl.close.value = wlmeshproxy_close;</script>
+</table>
+</form>
+
+</body>
+</blockquote>
+</html>

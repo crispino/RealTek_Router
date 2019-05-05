@@ -1,0 +1,68 @@
+include ../busybox/.config
+include ../../linux-3.10/.config
+include ../.config
+COAPLIB=$(shell pwd)/../libcoap-master/.libs/libcoap-1.a
+CRYPTOLIB=$(shell pwd)/../openssl-0.9.8i/libcrypto.a
+APMIBLIB=$(shell pwd)/../boa/apmib/libapmib.so
+RTLLINKLIB=$(shell pwd)/../rtl_link/liblink.a
+ANDLINKLIB_V2=libandlinkv2_$(TOOLCHAIN).a
+ANDLINKLIB_V3=libandlinkv3_$(TOOLCHAIN).a
+ifeq ($(CONFIG_ANDLINK_V2_SUPPORT), y)
+ANDLINKLIB=$(ANDLINKLIB_V2)
+CFLAGS += -DCONFIG_ANDLINK_V2_SUPPORT
+else ifeq ($(CONFIG_ANDLINK_V3_SUPPORT), y)
+ANDLINKLIB=$(ANDLINKLIB_V3)
+CFLAGS += -DCONFIG_ANDLINK_V3_SUPPORT
+endif
+ifeq ($(CONFIG_ANDLINK_V24_SUPPORT), y)
+CFLAGS += -DCONFIG_ANDLINK_V24_SUPPORT
+endif
+CFLAGS += -I$(shell pwd)/../libcoap-master/include/coap
+CFLAGS += -I$(shell pwd)/../libcoap-master/
+CFLAGS += -I$(shell pwd)/../boa/apmib/
+CFLAGS += -I$(shell pwd)/../openssl-0.9.8i/include/
+CFLAGS += -I$(shell pwd)/../rtl_link/
+ifeq ($(CONFIG_APP_RTK_ADAPTER),y)
+CFLAGS += -I$(shell pwd)/../adapter-api/rtk_api/
+LDFLAGS += -L$(shell pwd)/../adapter-api/rtk_api -lrtk_adapter
+endif
+CFLAGS += $(COMMON_CFLAGS)
+CFLAGS += -DWITH_POSIX	
+CFLAGS += -lm
+CFLAGS += -Wall
+
+MTDAPI_DIR=$(DIR_ROOT)/users/lib/lib
+ifeq ($(CONFIG_MTD_NAME_MAPPING),y)
+CFLAGS += -DMTD_NAME_MAPPING
+CFLAGS += -L$(MTDAPI_DIR) -lmtdapi
+endif
+
+ifeq ($(CONFIG_STA_ROAMING_CHECK), y)
+CFLAGS += -DSTA_ROAMING_CHECK
+endif
+
+ifeq ($(CONFIG_RTK_SMART_ROAMING), y)
+CFLAGS += -DRTK_SMART_ROAMING
+endif
+
+ifeq ($(CONFIG_WGET), y)
+CFLAGS += -DCONFIG_WGET
+endif
+
+SRC = andlink.c
+OBJ = $(SRC:%.c=%.o)
+
+all: andlink
+
+andlink: $(OBJ)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(COAP_LIB) -o $@	$^ $(APMIBLIB) $(ANDLINKLIB) $(RTLLINKLIB) $(CRYPTOLIB) $(COAPLIB)
+	$(STRIP) $@
+clean:
+	rm -rf *.o andlink
+
+romfs:
+ifeq ($(CONFIG_MTD_NAME_MAPPING),y)
+	$(ROMFSINST) $(DIR_ROOT)/users/lib/lib/libmtdapi.so /lib/libmtdapi.so
+endif
+	$(ROMFSINST) /bin/andlink
+	

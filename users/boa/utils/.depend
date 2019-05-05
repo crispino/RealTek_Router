@@ -1,0 +1,24 @@
+flash.o: flash.c ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h \
+ ../apmib/mibtbl.h ../apmib/apmib.h ../apmib/def_setting_config.h \
+ /data/xiaoning/RealTek/HN120/linux-3.10/drivers/net/wireless/rtl8192cd/ieee802_mib.h
+fwd.o: fwd.c ../../rtl_link/fwupgrade.h
+uart.o: uart.c
+fwupg.o: fwupg.c ../src/boa.h ../src/config.h ../src/compat.h \
+ ../src/defines.h ../src/globals.h ../src/escape.h ../src/apform.h \
+ ../apmib/apmib.h ../apmib/list.h ../apmib/mibdef.h ../src/utility.h \
+ ../src/../../adapter-api/rtk_api/rtk_api.h \
+ ../src/../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../src/../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../src/../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../src/../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../src/../../adapter-api/rtk_api/../common/common_utility.h
+utility.o: ../src/utility.c ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h ../src/utility.h \
+ ../src/../../adapter-api/rtk_api/rtk_api.h \
+ ../src/../../adapter-api/rtk_api/../../boa/apmib/apmib.h \
+ ../src/../../adapter-api/rtk_api/./rtk_firewall_adapter.h \
+ ../src/../../adapter-api/rtk_api/./../common/common_utility.h \
+ ../src/../../adapter-api/rtk_api/rtk_disk_adapter.h \
+ ../src/../../adapter-api/rtk_api/../common/common_utility.h
+chk_wanaccess.o: chk_wanaccess.c ../apmib/apmib.h ../apmib/list.h \
+ ../apmib/mibdef.h
